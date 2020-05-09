@@ -21,6 +21,16 @@ a:hover {
 
 /* Back image */
 
+.bgd-img-jzhu {
+	background: url('assets/background.jpg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
+    background-size: cover;
+    overflow: auto;
+}
+
 .bgd-img-astro {
 	background: url('assets/stock_astro.jpeg') no-repeat center center fixed;
 	-webkit-background-size: cover;
