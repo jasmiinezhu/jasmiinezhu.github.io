@@ -73,12 +73,30 @@ body {
   max-width: 50em;
 }
 
+@media (min-width: 50em) {
+  .full-width {
+    margin-left: calc(-100vw / 2 + 50em / 2);
+    margin-right: calc(-100vw / 2 + 50em / 2);
+  }
+}
+
 
 /*
  * Header
  */
 .masthead {
   margin-bottom: 2rem;
+}
+
+.no-hover:hover {
+  text-decoration: none currentcolor solid;
+}
+
+.my-card-blur {
+  backdrop-filter: brightness(50%) blur(3px);
+}
+.my-card-blur:hover {
+  backdrop-filter: brightness(75%) blur(1px);
 }
 
 .masthead-brand {
