@@ -90,12 +90,16 @@ body {
 
 .no-hover:hover {
   text-decoration: none currentcolor solid;
+  -webkit-text-decoration: none currentcolor solid;
 }
 
 .my-card-blur {
+  -webkit-backdrop-filter: brightness(50%) blur(3px);
   backdrop-filter: brightness(50%) blur(3px);
 }
 .my-card-blur:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: brightness(75%) blur(1px);
   backdrop-filter: brightness(75%) blur(1px);
 }
 
