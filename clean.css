@@ -1,0 +1,215 @@
+/* Get Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+/* Color themes */
+/* Light mode default */
+html {
+	--link: #239bf7;
+	--link-highlight: #60D394;
+	--accent: #FFC100;
+	--accent-overlay: #001427;
+	--color: #323948;
+	--bg: #FFFFFF;
+	--blur-overlay: #ffffff;
+	--tag: #b53ef5;
+}
+
+/* Dark mode */ 
+@media (prefers-color-scheme: dark) {
+	html {
+		--link-highlight: #2F4858;
+	    --link: #C4F1BE;
+	    --accent: #F2D5F8;
+	    --accent-overlay: #0C0A3E;
+	    --color: #D3C9E1;
+	    --bg: #211630;
+  	}
+}
+
+/* Default styling */
+html, body {
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+}
+  
+body {
+	font-family: 'Inter', sans-serif;
+	font-weight: 700;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background: var(--bg);
+	color: var(--color);
+	transition: color 120ms ease-out 0s;
+}
+  
+a {
+	color: var(--link);
+	text-decoration: none;
+	transition: all 120ms ease-out 0s;
+	font-weight: 800;
+}
+
+a:hover, a:focus {
+	color: var(--link-highlight);
+}
+
+/* Convenience classes */
+
+.no-wrap {
+	white-space: nowrap;
+}
+
+.no-bg {
+	background: transparent !important;
+}
+
+.non-scrollable {
+	overflow: hidden;
+}
+
+.bottom {
+	margin-top: auto;
+}
+
+/* Cover */
+
+.cover-container {
+	height: 100%;
+	max-width: 75em;
+
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+
+	padding: 15px 5vw 15px;
+}
+
+.vertical-center {
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.avatar {
+	width: 80px;
+	height: 80px;
+	border-radius: 100px;
+	margin-bottom: 1.2rem;
+}
+
+.avatar-small {
+	width: 60px;
+	height: 60px;
+	border-radius: 100px;
+	margin-bottom: 1.2rem;
+}
+
+.cover-heading {
+	font-size: 2.25rem;
+	line-height: 1.5;
+	padding-bottom: 1.2rem;
+}
+
+.cover-subheading {
+	font-size: 1.35rem;
+	line-height: 1.5;
+	padding-bottom: 1.2rem;
+}
+
+/* Social bar */
+
+.social-bar {
+	display: inline-flex;
+	flex-wrap: wrap;
+	padding-top: 1.2rem;
+	padding-bottom: 2.4rem;
+}
+
+.social-icon:not(:last-of-type) {
+	padding-right: 1.2rem;
+}
+
+.social-icon>a>svg {
+	width: 40px;
+	height: 40px;
+	fill: var(--link);
+}
+
+.social-icon>a>svg:hover, .social-icon>a>svg:focus {
+	fill: var(--link-highlight);
+}
+
+/* Project section */
+
+.section {
+	padding-top: 24px;
+	max-width: 35em;
+}
+
+.section-heading {
+	line-height: 1.0;
+	background-color: var(--accent);
+	background-size: cover;
+	color: var(--accent-overlay);
+}
+
+.section-divider {
+	padding-bottom: 24px;
+	border-bottom: 1px solid lightgray;
+}
+
+.caps {
+	text-transform: uppercase;
+}
+
+/* Card */
+
+.card-inner {
+	padding: 0px 10px 0px;
+}
+
+.rounded {
+	border-radius: 25px;
+	border-top-left-radius: 30px;
+	border-top-right-radius: 30px;
+}
+
+.rounded-top {
+	border-top-left-radius: 25px;
+	border-top-right-radius: 25px;
+}
+
+.my-blur-card {
+	-webkit-backdrop-filter: brightness(50%) blur(3px);
+	backdrop-filter: brightness(50%) blur(3px);
+
+	display: flex;
+	flex-direction: column;
+}
+
+.my-blur-card:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: brightness(75%) blur(1px);
+  backdrop-filter: brightness(75%) blur(1px);
+}
+
+.card-bottom {
+	margin-top: auto;
+
+	color: var(--blur-overlay);
+	text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+}
+
+/* Tag */
+
+.small-tag {
+	font-size: 0.8rem;
+	font-weight: 400;
+	color: var(--tag);
+}
+
+.small-tag:hover,
+.small-tag:focus {
+	color: var(--tag);
+}
